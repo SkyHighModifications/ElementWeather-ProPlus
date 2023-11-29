@@ -28,7 +28,7 @@ local function hasBetaRole(player)
                     return true  -- The player has the beta role
                 end
             end
-        end, 'GET', '', { ['Authorization'] = 'Bot ' .. 'MTA3ODg5NTc1NjM2ODQyMDk0NQ.GQPALx.4aU_HSXg7DNueDEsOz8XpnD3iJbYaCHVcAW8dM' })
+        end, 'GET', '', { ['Authorization'] = 'Bot ' .. '1078895756368420945' })
     end
 
     return false  -- Default to false if any errors occur
