@@ -34,7 +34,6 @@ local function hasBetaRole(player)
     return false  -- Default to false if any errors occur
 end
 
-if Config.ScriptUpdates then
     -- Trigger update check on resource start
     AddEventHandler('onResourceStart', function(resource)
         -- Check if the current resource is the one being started
@@ -79,5 +78,5 @@ if Config.ScriptUpdates then
             end)
         end
     end)
-end
+
 
