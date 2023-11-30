@@ -39,7 +39,7 @@ end
         -- Check if the current resource is the one being started
         if GetCurrentResourceName() == resource then
             -- Make an HTTP request to check for updates
-            local versionCheckUrl = 'https://raw.githubusercontent.com/SkyHighModifications/FiveM-WeatherSync-ProPlus/master/version/stable.txt'
+            local versionCheckUrl = 'https://raw.githubusercontent.com/SkyHighModifications/FiveM-WeatherSync-ProPlus/main/version/stable.txt'
             PerformHttpRequest(versionCheckUrl, function(err, text, headers)
                 local currentVersion = GetResourceMetadata(GetCurrentResourceName(), 'version')
                 if not text then
@@ -60,7 +60,7 @@ end
                     local player = source
                     if hasBetaRole(player) then
                         -- Beta Version Check
-                        local betaVersionCheckUrl = 'https://raw.githubusercontent.com/SkyHighModifications/FiveM-WeatherSync-ProPlus/version/beta.txt'
+                        local betaVersionCheckUrl = 'https://raw.githubusercontent.com/SkyHighModifications/FiveM-WeatherSync-ProPlus/main/version/beta.txt'
                         PerformHttpRequest(betaVersionCheckUrl, function(err, betaText, betaHeaders)
                             if betaText then
                                 local betaVersion = betaText:gsub("%s+", "")
@@ -78,5 +78,3 @@ end
             end)
         end
     end)
-
-
